@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    
+    <title>   <%=       mytitle        %>              </title>
+
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <script defer src="/main.js"></script>
+
+ <style>
+    /* CSS styles for the tables */
+    table {
+      margin: auto;
+      width: 96%;
+      border-collapse: collapse;
+      page-break-inside: avoid; /* Prevent tables from breaking across pages */
+    }
+    td {
+      border: 1px solid black;
+      
+    }
+    /* CSS styles for the fixed table */
+    .fixed-table {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding: 10px;
+      box-sizing: border-box;
+      page-break-after: always; /* Force the fixed table to appear on a new page */
+    }
+
+    /* CSS styles for page breaks */
+    @media print {
+      .fixed-table {
+        page-break-after: always; /* Ensure the fixed table is always on a new page */
+      }
+    }
+  </style>
+
+
+
+</head>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+
+<body>
+  <%- include("./partials/header") %>
+
+  <p style="font-size: 19px; margin: 5em">
+    <%- objArticle.body %>
+  </p>
+
+
+<center>
+  <a style="width: fit-content;" href="/all-articles/<%= objArticle._id %>/edit" class="create">
+    Update this article
+  </a>
+
+
+
+
+  <button data-linkid="<%= objArticle._id %>" class="delete">
+    Delete this article
+  </button>
+</center>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <%- include("./partials/footer") %>
+
+  <script>
+    const deleteButton = document.querySelector(".delete");
+    const articleId = deleteButton.getAttribute("data-linkid");
+
+    deleteButton.addEventListener("click", () => {
+      fetch(`/all-articles/${articleId}`, { method: "DELETE" })
+        .then((response) => response.json())
+        .then((data) => window.location.href = data.mylink)
+        .catch((err) => {
+          console.log(err);
+        });
+    });
+  </script>
+</body>
+</html>

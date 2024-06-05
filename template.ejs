@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Trending Articles &#128293;</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      all: unset;
+    }
+    h1 {
+      /* Add your h1 styles here */
+    }
+    /* Add your other styles here */
+  </style>
+</head>
+<body>
+  <h1>Trending Articles &#128293;</h1>
+  <div>
+    <% articles.forEach(article => { %>
+      <% if (currentPage.y > doc.page.height - 100) { %>
+        <% currentPage = doc.addPage(); %>
+      <% } %>
+      <a href="/all-articles/<%= article._id %>">
+        <div><%- article.body %></div>
+      </a>
+    <% }); %>
+  </div>
+</body>
+</html>

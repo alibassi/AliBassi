@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <%- include("./partials/head") %>
+
+  <body id="body">
+    <%- include("./partials/header") %>
+
+    <main id="main">
+      <section>
+        <center style="background-color: rgb(177, 114, 235);"><strong>Update article </strong> </center>
+
+        <form method="POST" action="/all-articles/<%= objArticle._id %>">
+          <div  style="display: none;">
+          <label for="title">Article title: </label>
+          <input name="title" id="title" type="text" value="<%= objArticle.title %>" />
+
+          <label for="summary">Article summary: </label>
+          <input name="summary" id="summary" type="text" value="<%= objArticle.summary %>" />
+
+          <label for="body">Article body:</label>
+        </div>
+          <textarea style=" width: 100%  !important; height: 650px !important;" name="body" id="body"><%= objArticle.body %></textarea>
+
+          <button class="update">Update</button>
+        </form>
+      </section>
+    </main>
+
+   
+  </body>
+</html>
