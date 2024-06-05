@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 const Article = require("./models/articleSchema");
-const generatePDF = require("./generatePDF");
+
 const pdf = require("html-pdf");
 const fs = require("fs");
 const bodyParser = require("body-parser");
