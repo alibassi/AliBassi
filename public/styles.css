@@ -724,6 +724,7 @@ textarea {
 .delete:active {
   transform: scale(0.9);
   background-color: tomato;
+    display: none;
 }
 
 
@@ -738,6 +739,7 @@ textarea {
   border-radius: 6px;
   display: block;
   font-size: 25px;
+    display: none;
 }
 
 
