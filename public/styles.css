@@ -712,6 +712,7 @@ textarea {
   border-radius: 6px;
   display: block;
   font-size: 25px;
+    display: none;
 }
 
 
