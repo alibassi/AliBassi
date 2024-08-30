@@ -46,7 +46,7 @@ const mongoose = require("mongoose");
 mongoose.set("strictQuery", false); // Add this line to address the deprecation warning
 
 mongoose
-  .connect('mongodb+srv://alibassi:ali&é"ali@cluster0.utum5kz.mongodb.net/all-data?retryWrites=true&w=majority')
+  .connect('mongodb+srv://alibassi:ali&é"ali@cluster0.utum5kz.mongodb.net/texte2025?retryWrites=true&w=majority')
   .then((result) => {
     app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`);
