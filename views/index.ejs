@@ -7,14 +7,55 @@
     <%- include("./partials/header") %>
 
 
-  
+<style>
+    .float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #0015ffbf;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
 
+.float-button:hover {
+    background-color: #00b303d3;
+}
+
+</style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('floatButton');
+    let isAtBottom = false;
+
+    button.addEventListener('click', () => {
+        if (isAtBottom) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            button.textContent = '⬇';
+        } else {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            button.textContent = '⬆';
+        }
+        isAtBottom = !isAtBottom;
+    });
+});
+    </script>
 
 
 
 
    <center  class="noprinted nonprint" > <button onclick="printPage()"   >Print</button>
-
+    <button id="floatButton" class="float-button">⬇</button>
    <button  class="noprinted" ><a href="/add-new-article"> Add new article </a></button>
 
     
