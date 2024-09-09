@@ -10,7 +10,7 @@
 
 
   table, th, td {
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
   }
 
@@ -38,6 +38,9 @@
             -moz-user-select: none; /* Prevent selection in Firefox */
             -ms-user-select: none; /* Prevent selection in IE10+ */
             user-drag: none; /* Standardized way */
+                        pointer-events: none; /* Disable any kind of interaction */
+            user-select: none; /* Prevent image selection */
+            -webkit-user-drag: none; /* Disable dragging on mobile */
         }
 
 
