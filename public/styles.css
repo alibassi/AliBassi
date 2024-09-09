@@ -31,6 +31,16 @@
 
 
 
+
+        .nonSelectImg {
+            user-select: none; /* Prevent image selection */
+            -webkit-user-drag: none; /* Prevent drag on WebKit browsers */
+            -moz-user-select: none; /* Prevent selection in Firefox */
+            -ms-user-select: none; /* Prevent selection in IE10+ */
+            user-drag: none; /* Standardized way */
+        }
+
+
   .tblcoine {
     border-left: 2px solid transparent;
     border-top: 2px solid transparent;
